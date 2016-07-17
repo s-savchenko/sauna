@@ -1,0 +1,150 @@
+@font-face {
+		font-family: Gothic;
+		src: url(fonts/Gothic.ttf);
+	}
+	* {
+		font-family: Gothic, CenturyGothic, AppleGothic, sans-serif;
+	}
+	.clear {
+		clear: both;
+	}
+	.container {
+		margin: auto;
+		padding: 0 10px;
+	}
+	html {
+		width: auto;
+	}
+	.header {
+		background: url(background-header.png);
+		background-size: cover;
+		background-position: center bottom;
+	}
+	.header .stripe {
+		height: 40px;
+		background: rgba(255,255,255,0.2);
+	}
+	.header .stripe button {
+		display: block;
+		background: url(img/bg-stripes.png) no-repeat center center;
+		background-size: contain;
+		width: 19px;
+		height: 40px;
+	}
+	.header .stripe button,
+	.header .stripe h1,
+	.header .stripe a {
+		float: left;
+		color: white;
+	}
+	.header .stripe h1,
+	.header .stripe a {
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+	}
+	.header .stripe a {
+		text-decoration: none;
+	}
+	.header .stripe h1 {
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.header .stripe a.phone {
+		background: url(img/bg-phone.png) no-repeat left center;
+		padding-left: 30px;
+		float:right;
+
+	}
+	.header .stripe a.mail {
+		background: url(img/bg-mail.png) no-repeat left center;
+		padding-left: 33px;
+		margin-left: 20px;
+		float:right;
+	}
+
+	.header .main {
+ 		padding-top: 30px;
+ 		padding-bottom: 30px;
+	}
+	
+	.header .main p {
+		font-size: 36px;
+		font-weight: bold;
+		text-align: right;
+		color: white;
+		width: auto;
+    	background-color: black;		
+	}
+
+
+
+
+	.header .main .form {
+		float: right;
+		padding: 20px;
+		width: 300px;
+		border-radius: 40px;
+		background: rgba(0,0,0,0.2);
+		margin: 0 60px;
+	}
+	.header .main .form .form__header {
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		text-align: center;
+		border-bottom: 1px solid white;
+		height: 25px;
+	}
+
+
+	.header .main .form .form__control,
+	.header .main .form .form__footer {
+		margin-top: 21px;
+	}
+	.header .main .form .form__control input,
+	.header .main .form .form__control select {
+		width: 280px;
+		padding: 6px 10px;
+		border-radius: 2px;
+		border:none;
+		border-top: 1px solid #a8a8a8;
+		border-left: 1px solid #a8a8a8;
+		font-size: 14px;
+	}
+	.header .main .form .form__control select {
+		width: 300px;
+	}
+	.header .main .form .form__footer {
+		border-top: 1px solid white;
+		text-align: center;
+	}
+	.header .main .form .form__footer button {
+		background: white;
+		border: none;
+		height: 41px;
+		width: 180px;
+		border-radius: 20px;
+		margin-top: 16px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.header .main .form .form__footer button div {
+		background:url(form-button.png) no-repeat right center;
+		text-align: left;
+		width: 120px;
+		margin: auto;
+	}
+
+
+
+	@media only screen 
+and (max-width : 480px) {
+	.header .main p {
+		float: right;
+	}
+	.header .main .form {
+		float: right;
+	}
+}

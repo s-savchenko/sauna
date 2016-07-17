@@ -1,0 +1,51 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 480px) {
+.header .stripe a.phone {
+		width: 24px;
+		overflow: hidden;
+		padding: 0;
+		color: transparent;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 768px) {
+	.header .stripe a.mail {
+		display: none;
+	}
+	.header .main .form {
+		width: 260px;
+	}
+	.header .main .form {
+		width: 260px;
+	}
+	.header .main .form .form__control input {
+		width: 240px;
+	}
+	.header .main .form .form__control select {
+		width: 260px;
+	}
+}
+
+@media only screen 
+and (max-width : 920px) {
+	.header .main .promo {
+		font-size: 4vw;
+
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 1024px) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1025px) {
+	.container {
+		width: 960px;
+	}
+}
