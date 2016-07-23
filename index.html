@@ -4,10 +4,16 @@
 	<title></title>
 	<meta name=viewport content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/advantages.css">
+	<link rel="stylesheet" type="text/css" href="css/rooms.css">
 	<link rel="stylesheet" type="text/css" href="css/media.css">
 	<link rel="stylesheet" type="text/css" href="css/price.css">
+	<link rel="stylesheet" type="text/css" href="css/reviews.css">
+	<link rel="stylesheet" type="text/css" href="css/map.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 </head>
 <body>
 	
@@ -69,12 +75,98 @@
 		</div>
 	</section>
 
+	<section class="rooms"></section>
+
 	<section class="price">
 		<div class="container">
 			<h2>Прайс</h2>
+			<div class="price_holder">
+				<table>
+					<tr>
+						<td class="left">Услуги</td>
+						<td class="day">Будние дни с 10.00 до 18.00</td>
+						<td class="night">Будние дни с 18.00 до 10.00<br>Выходные дни</td>
+					</tr>
+					<tr>
+						<td class="left bold">Русская баня</td>
+						<td>400 р/час</td>
+						<td>400 р/час</td>
+					</tr>
+					<tr>
+						<td class="left bold">Финская баня</td>
+						<td>400 р/час</td>
+						<td>400 р/час</td>
+					</tr>
+					<tr>
+						<td class="left bold">Турецкий хамам</td>
+						<td>400 р/час</td>
+						<td>400 р/час</td>
+					</tr>
+				</table>
+			</div>
+			<p class="caption">Травяной чай в подарок каждому посетителю</p>
+		</div>
+	</section>
+
+	<section class="reviews">
+		<div class="container">
+			<h2>Отзывы</h2>
+			<div class="reviews_holder">
+				<div class="rl"></div>
+				<div class="rr"></div>
+				<div class="rc">
+					<div class="review">your content</div>
+					<div class="review">your content</div>
+					<div class="review">your content</div>
+					<div class="review">your content</div>
+					<div class="review">your content</div>
+					<div class="review">your content</div>
+				</div>
+				<div class="clear"></div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<div class="container">
+			<h2>Схема проезда</h2>
+			<p class="caption">г.Новосибирск, Джержинский р-он, ул.Волочаевская 52</p>
+			<div id="yandex_map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_KJO--Q652qrdilHelXEEUmQUiD47BLs&amp;width=100%&amp;height=530&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+				<div class="clear"></div>
+			</div>
 
 		</div>
 	</section>
 
+	<section class="footer">
+		<div class="container">
+			<div class="l">
+				<p>&copy; Сибирские бани</p>
+				<p>+7 923 140 91 42</p>
+				<p>s.savchenko@outlook.com</p>
+			</div>
+			<div class="r">
+				<p>Социальные сети</p>
+				<p>Разработка сайта <a href="http://romsaweb.ru" target="_blank">romsaweb.ru</a></p>
+				<p>Новосибирск, 2016</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script>
+		$(function(){
+			$('.rc').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				prevArrow: $('.rl'),
+				nextArrow: $('.rr'),
+
+			});
+		});
+	</script>
 </body>
 </html>

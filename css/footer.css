@@ -1,0 +1,26 @@
+.footer {
+    min-height: 128px;
+    background: #4f4f4f;
+    color: white;
+    font-size: 14px;
+    padding-top: 19px;
+}
+.footer .l,
+.footer .r {
+    float:left;
+    width: 50%;
+    text-align: left;
+}
+.footer .r {
+    text-align: right;
+}
+.footer .l p:first-child {
+    text-transform: uppercase;
+}
+.footer p {
+    padding-bottom: 10px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}

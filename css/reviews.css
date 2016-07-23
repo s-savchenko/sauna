@@ -1,0 +1,33 @@
+.reviews {
+    background: #dedede;
+}
+.reviews h2 {
+    background: url(../img/reviews.png) center left no-repeat;
+    width: 180px;
+    text-align: right;
+    margin: auto;
+}
+.reviews .reviews_holder .rc {
+background: green;
+padding: 0 100px;
+}
+.reviews .reviews_holder .rl,
+.reviews .reviews_holder .rr {
+    float: left;
+    height: 152px;
+    width: 60px;
+    background: url(../img/arrow_left.png) no-repeat right center;
+}
+.reviews .reviews_holder .rl:hover,
+.reviews .reviews_holder .rr:hover {
+    cursor: pointer;
+}
+.reviews .reviews_holder .rr {
+    float: right;
+    background: url(../img/arrow_right.png) no-repeat left center;
+}
+.review {
+    width: 380px;
+    margin: 0 20px;
+    background: red;
+}

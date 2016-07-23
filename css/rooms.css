@@ -1,0 +1,5 @@
+.rooms {
+    height: 660px;
+    background: url(../img/bg-rooms.png) center bottom;
+    background-size: cover;
+}

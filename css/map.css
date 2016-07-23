@@ -1,0 +1,14 @@
+.map {
+    background: #f0f0f0;
+    padding-bottom: 20px;
+}
+.map h2 {
+    padding-bottom: 10px;
+}
+.map .caption {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.map #yandex_map {
+    height: 530px;
+}
