@@ -1,5 +1,22 @@
 .reviews {
     background: #dedede;
+    /*display: none;*/
+    padding-bottom: 20px;
+}
+.reviews .rl,
+.reviews .rr {
+    float: left;
+    background: url(../img/arrow_left.png) no-repeat right center;
+    height: 95px;
+    width: 28px;
+}
+.reviews .rr {
+    float: right;
+    background: url(../img/arrow_right.png) no-repeat left center;
+}
+.reviews .rl:hover,
+.reviews .rr:hover {
+    cursor: pointer;
 }
 .reviews h2 {
     background: url(../img/reviews.png) center left no-repeat;
@@ -8,26 +25,38 @@
     margin: auto;
 }
 .reviews .reviews_holder .rc {
-background: green;
-padding: 0 100px;
+margin: 0 70px;
 }
 .reviews .reviews_holder .rl,
 .reviews .reviews_holder .rr {
-    float: left;
     height: 152px;
     width: 60px;
-    background: url(../img/arrow_left.png) no-repeat right center;
 }
-.reviews .reviews_holder .rl:hover,
-.reviews .reviews_holder .rr:hover {
-    cursor: pointer;
-}
-.reviews .reviews_holder .rr {
-    float: right;
-    background: url(../img/arrow_right.png) no-repeat left center;
+.reviews .slick-slide {
+    padding: 0 10px;
 }
 .review {
-    width: 380px;
-    margin: 0 20px;
-    background: red;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 18px;
+    font-size: 12px;
+    font-style: italic;
+}
+.review .stars {
+    height: 16px;
+    background: url(../img/star.png);
+    margin: 14px 0;
+}
+.review .author {
+    font-style: normal;
+}
+.reviews .foto {
+    width: 110px;
+    height: 110px;
+    float: right;
+    overflow: hidden;
+    padding-right: 32px;
+}
+.reviews .foto img {
+    border-radius: 110px;
 }
