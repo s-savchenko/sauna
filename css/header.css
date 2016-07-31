@@ -140,14 +140,70 @@
 		margin: auto;
 	}
 
-
-
-	@media only screen 
-and (max-width : 480px) {
+@media only screen
+and (max-width : 768px) {
+	.header .stripe a.mail {
+		display: none;
+	}
 	.header .main p {
-		float: right;
+		height: 120px;
+		position: relative;
+		top: -351px;
+		text-align: center;
+		padding: 10px;
+	}
+	.header .main p span {
+		display: inline;
 	}
 	.header .main .form {
-		float: right;
+		float: none;
+		position: relative;
+		top: 120px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen
+and (max-width : 768px) {
+	.header .stripe a.mail {
+		display: none;
+	}
+	.header .main p {
+		height: 120px;
+		position: relative;
+		top: -351px;
+		text-align: center;
+		padding: 10px;
+	}
+	.header .main p span {
+		display: inline;
+	}
+	.header .main .form {
+		float: none;
+		position: relative;
+		top: 140px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen
+and (max-width : 582px) {
+	.header .main p {
+		height: 140px;
+		top: -351px;
+	}
+	.header .main .form {
+		top: 160px;
+	}
+}
+
+@media only screen
+and (max-width : 424px) {
+	.header .main p {
+		height: 160px;
+		top: -351px;
+	}
+	.header .main .form {
+		top: 180px;
 	}
 }
