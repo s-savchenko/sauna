@@ -3,3 +3,20 @@
     background: url(../img/bg-rooms.png) center bottom;
     background-size: cover;
 }
+.rooms .info {
+    background: rgba(0,0,0,0.2);
+    border-radius: 40px;
+    padding: 50px 20px;
+}
+.rooms .info button {
+    background: white;
+    border: none;
+    height: 41px;
+    width: 180px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 16px auto;
+    margin-bottom: 0;
+    display: block;
+}
