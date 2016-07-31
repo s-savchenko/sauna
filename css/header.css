@@ -73,7 +73,12 @@
 		text-align: right;
 		color: white;
 		width: auto;
-    	background-color: black;		
+	}
+
+	.header .main p span {
+		display: table-cell;
+		height: 351px;
+		vertical-align: middle;
 	}
 
 
