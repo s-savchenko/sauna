@@ -60,3 +60,22 @@ margin: 0 70px;
 .reviews .foto img {
     border-radius: 110px;
 }
+.reviews .top_arrows {
+    display: none !important;
+}
+
+@media only screen
+and (max-width : 600px) {
+    .reviews .top_arrows {
+        display: block !important;
+    }
+    .reviews .bottom_arrows {
+        display: none !important;
+    }
+    .reviews .reviews_holder .rc {
+        margin: 0;
+    }
+    .reviews .slick-slide {
+        padding: 0;
+    }
+}

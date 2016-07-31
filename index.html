@@ -75,7 +75,9 @@
 		</div>
 	</section>
 
-	<section class="rooms"></section>
+	<section class="rooms">
+		div.cont
+	</section>
 
 	<section class="price">
 		<div class="container">
@@ -114,8 +116,8 @@
             <div class="rr top_arrows"></div>
 			<h2>Отзывы</h2>
 			<div class="reviews_holder">
-				<div class="rl"></div>
-				<div class="rr"></div>
+				<div class="rl bottom_arrows"></div>
+				<div class="rr bottom_arrows"></div>
 				<div class="rc">
 					<div>
                         <div class="review">
@@ -197,10 +199,18 @@
     $(function(){
         $('.rc').slick({
             slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToScroll: 2,
             prevArrow: $('.rl'),
             nextArrow: $('.rr'),
-            respondTo: 'min'
+            responsive: [
+			{
+				breakpoint: 860,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
         });
     });
 </script>
