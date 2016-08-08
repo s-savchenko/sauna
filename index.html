@@ -80,20 +80,14 @@
 		<div class="container">
 			<div class="room">
 				<h2>Русская баня</h2>
-				<div id="carousel">
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-					<a href="#"><img src="img/4.jpg" id="item-1" /></a>
-				</div>
 				<div class="info">
 					<p>По описанию древнегреческого историка Геродота, бани скифских племён напоминали юрты. Связанные верхними концами наклонно установленные жерди обтягивали сверху войлоком. Посередине ставили котёл с отваром трав и в него бросали раскалённые камни, которые предварительно нагревали снаружи на костре. При этом образовывался влажный пар, насыщенный фитонцидами, который оказывал бактерицидное воздействие на внутреннюю атмосферу помещения. Известно, что у скифов существовала практика пользования корой деревьев, предварительно размягченной при помощи камней для очищения кожных покровов. Подобная практика гигиенических процедур позволяла поддерживать здоровье и чистоту кожи во время длительных кочевых переходов. При этом сборно-разборная конструкция их походных бань предоставляла возможность перевозить данные бани с собой в повозках и при необходимости за короткое время установить их во время стоянки. Походная баня древних скифских и сарматских племен, кочующих по северным берегам Чёрного моря считается прародительницей современных мобильных бань на основе каркасно-тентовых конструкций.</p>
 					<button>
 						<div>Заказать</div>
 					</button>
 				</div>
+
+
 			</div>
 		</div>
 	</section>
@@ -231,46 +225,6 @@
 				}
 			]
 			});
-		});
-	</script>
-	<script type="text/javascript" src="js/jquery.waterwheelCarousel.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			var carousel = $("#carousel").waterwheelCarousel({
-				flankingItems: 3,
-				movingToCenter: function ($item) {
-					$('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-				},
-				movedToCenter: function ($item) {
-					$('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-				},
-				movingFromCenter: function ($item) {
-					$('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-				},
-				movedFromCenter: function ($item) {
-					$('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-				},
-				clickedCenter: function ($item) {
-					$('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-				}
-			});
-
-			$('#prev').bind('click', function () {
-				carousel.prev();
-				return false
-			});
-
-			$('#next').bind('click', function () {
-				carousel.next();
-				return false;
-			});
-
-			$('#reload').bind('click', function () {
-				newOptions = eval("(" + $('#newoptions').val() + ")");
-				carousel.reload(newOptions);
-				return false;
-			});
-
 		});
 	</script>
 </body>
