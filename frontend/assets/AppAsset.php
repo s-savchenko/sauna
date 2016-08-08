@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
         'css/slick.css',
     ];
     public $js = [
+        'js/slick.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
