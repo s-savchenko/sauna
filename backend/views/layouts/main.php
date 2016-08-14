@@ -249,69 +249,8 @@ desired effect
             \yiister\adminlte\widgets\Menu::widget(
                 [
                     "items" => [
-                        ["label" => "Home", "url" => "/", "icon" => "home"],
-                        ["label" => "Layout", "url" => ["site/layout"], "icon" => "files-o"],
-                        ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"],
-                        [
-                            "label" => "Widgets",
-                            "icon" => "th",
-                            "url" => "#",
-                            "items" => [
-                                ["label" => "Menu", "url" => ["site/menu"]],
-                                ["label" => "Boxes", "url" => ["site/boxes"]],
-                                ["label" => "FlashAlert", "url" => ["site/flash-alert"]],
-                                ["label" => "Callouts", "url" => ["site/callouts"]],
-                            ],
-                        ],
-                        [
-                            "label" => "Badges",
-                            "url" => "#",
-                            "icon" => "table",
-                            "items" => [
-                                [
-                                    "label" => "Default",
-                                    "url" => "#",
-                                    "icon" => "table",
-                                    "badge" => "123",
-                                ],
-                                [
-                                    "label" => "Blue",
-                                    "url" => "#",
-                                    "icon" => "table",
-                                    "badge" => "123",
-                                    "badgeOptions" => [
-                                        "class" => \yiister\adminlte\components\AdminLTE::BG_BLUE,
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            "label" => "Multilevel",
-                            "url" => "#",
-                            "icon" => "table",
-                            "items" => [
-                                [
-                                    "label" => "Second level",
-                                    "url" => "#",
-                                ],
-                                [
-                                    "label" => "Second level",
-                                    "url" => "#",
-                                    "icon" => "table",
-                                    "items" => [
-                                        [
-                                            "label" => "Default",
-                                            "url" => "#",
-                                        ],
-                                        [
-                                            "label" => "Red",
-                                            "url" => "#",
-                                            "icon" => "table",
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
+                        ["label" => "Статический контент", "url" => ["site/settings"], "icon" => "file-text-o"],
+                        ["label" => "Карта", "url" => ["site/map"], "icon" => "globe"],
                     ],
                 ]
             )

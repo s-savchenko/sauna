@@ -27,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'settings'],
+                        'actions' => ['logout', 'index', 'settings', 'map'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -100,12 +100,25 @@ class SiteController extends Controller
 
     public function actionSettings()
     {
+        $this->saveSettings([
+            'name', 'phone', 'email', 'city', 'address',
+            'advantage1', 'advantage2', 'advantage3', 'advantage4',
+            'promo'
+        ]);
+
+        return $this->render('settings/index');
+    }
+
+    public function actionMap()
+    {
+        $this->saveSettings(['map', 'address']);
+
+        return $this->render('map');
+    }
+
+    private function saveSettings($settings = [])
+    {
         if (Yii::$app->request->isPost) {
-            $settings = [
-                'name', 'phone', 'email', 'city', 'address',
-                'advantage1', 'advantage2', 'advantage3', 'advantage4',
-                'promo'
-            ];
             array_map(function ($key) {
                 $value = Yii::$app->request->post($key, false);
                 if ($value) {
@@ -116,12 +129,5 @@ class SiteController extends Controller
                 }
             }, $settings);
         }
-
-        return $this->render('settings/index');
-    }
-
-    public function actionMap()
-    {
-
     }
 }

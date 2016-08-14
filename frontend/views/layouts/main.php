@@ -205,9 +205,9 @@ $(function(){
     <section class="map">
         <div class="container">
             <h2>Схема проезда</h2>
-            <p class="caption">г.Новосибирск, Джержинский р-он, ул.Волочаевская 52</p>
+            <p class="caption"><?= Settings::address() ?></p>
             <div id="yandex_map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_KJO--Q652qrdilHelXEEUmQUiD47BLs&amp;width=100%&amp;height=530&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                <?= Settings::map() ?>
                 <div class="clear"></div>
             </div>
 
