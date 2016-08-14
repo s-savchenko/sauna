@@ -250,7 +250,7 @@ desired effect
                 [
                     "items" => [
                         ["label" => "Статический контент", "url" => ["site/settings"], "icon" => "file-text-o"],
-                        ["label" => "Карта", "url" => ["site/map"], "icon" => "globe"],
+                        ["label" => "Схема проезда", "url" => ["site/map"], "icon" => "globe"],
                     ],
                 ]
             )

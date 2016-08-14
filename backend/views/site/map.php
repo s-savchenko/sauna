@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
 use backend\widgets\Box;
 use common\models\Settings;
 
-$this->title = 'Карта';
+$this->title = 'Схема проезда';
 $this->params['breadcrumbs'][] = $this->title;
 
 echo Settings::map();
@@ -22,14 +22,6 @@ Box::begin([
 
 ActiveForm::begin(['options' => ['class' => 'form-horizontal settings-form']]); ?>
     <div class="box-body">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Город</label>
-
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="city" placeholder="Город"
-                       value="<?= Settings::city()?>">
-            </div>
-        </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Адрес</label>
 

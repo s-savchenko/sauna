@@ -37,14 +37,6 @@ ActiveForm::begin(['options' => ['class' => 'form-horizontal settings-form']]); 
             </div>
         </div>
         <div class="form-group">
-            <label for="city" class="col-sm-2 control-label">Город</label>
-
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="city" name="city" placeholder="Город"
-                       required="required" value="<?= Settings::city()?>">
-            </div>
-        </div>
-        <div class="form-group">
             <label for="address" class="col-sm-2 control-label">Адрес</label>
 
             <div class="col-sm-10">
