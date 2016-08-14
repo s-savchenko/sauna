@@ -1,6 +1,7 @@
 <?php
 namespace backend\controllers;
 
+use common\models\Settings;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -26,7 +27,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'settings'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -36,6 +37,7 @@ class SiteController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
+                    'settings' => ['post', 'get']
                 ],
             ],
         ];
@@ -94,5 +96,32 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionSettings()
+    {
+        if (Yii::$app->request->isPost) {
+            $settings = [
+                'name', 'phone', 'email', 'city', 'address',
+                'advantage1', 'advantage2', 'advantage3', 'advantage4',
+                'promo'
+            ];
+            array_map(function ($key) {
+                $value = Yii::$app->request->post($key, false);
+                if ($value) {
+                    $setting = Settings::findOne(['key' => $key]) ?: new Settings();
+                    $setting->key = $key;
+                    $setting->value = $value;
+                    $setting->save();
+                }
+            }, $settings);
+        }
+
+        return $this->render('settings/index');
+    }
+
+    public function actionMap()
+    {
+
     }
 }

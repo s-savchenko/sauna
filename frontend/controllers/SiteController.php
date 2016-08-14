@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\Settings;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -18,6 +19,7 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public $settings = [];
     /**
      * @inheritdoc
      */

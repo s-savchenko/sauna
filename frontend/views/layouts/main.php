@@ -4,11 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
+use common\models\Settings;
 
 AppAsset::register($this);
 $this->registerJs('
@@ -38,19 +35,19 @@ $(function(){
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode(Settings::name() . ' ' . $this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+    <?= $content ?>
     <section class="header">
         <div class="stripe">
             <div class="container">
                 <button></button>
-                <h1>Сибирские бани</h1>
-                <a class="mail" href="mailto:s.savchenko@outlook.com">s.savchenko@outlook.com</a>
-                <a class="phone" href="tel:+79231409142">79231409142</a>
+                <h1><?= Settings::name() ?></h1>
+                <a class="mail" href="mailto:<?= Settings::email() ?>"><?= Settings::email() ?></a>
+                <a class="phone" href="tel:<?= Settings::phone() ?>"><?= Settings::phone() ?></a>
                 <div class="clear"></div>
             </div>
         </div>
@@ -84,14 +81,14 @@ $(function(){
                     </div>
                 </form>
             </div>
-            <p><span>Скидка 30% при заказе от 3-х часов в будние дни до 16:00</span></p>
+            <p><span><?= Settings::promo() ?></span></p>
             <div class="clear"></div>
         </div>
     </section>
 
     <section class="advantages">
         <div class="container">
-            <h1>Сибирские бани</h1>
+            <h1><?= Settings::name() ?></h1>
             <ul>
                 <li class="advantages__item"><span>Три комфортабельных номера с Русской, Финской и Турецкой парилками</span></li>
                 <li class="advantages__item"><span>Разнообразное меню, включающее чайную карту, алкагольную карту, холодные и горячие закуски</span></li>
@@ -220,9 +217,9 @@ $(function(){
     <section class="footer">
         <div class="container">
             <div class="l">
-                <p>&copy; Сибирские бани</p>
-                <p>+7 923 140 91 42</p>
-                <p>s.savchenko@outlook.com</p>
+                <p>&copy; <?= Settings::name() ?></p>
+                <p><?= Settings::phone() ?></p>
+                <p><?= Settings::email() ?></p>
             </div>
             <div class="r">
                 <p>Социальные сети</p>
